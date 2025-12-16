@@ -1,0 +1,60 @@
+name: 🐛 Bug Report
+description: 不具合の報告はこちらからお願いします
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。
+        再現・修正を迅速に行うため、できるだけ詳しくご記入ください。
+
+  - type: input
+    id: blender_version
+    attributes:
+      label: Blender バージョン
+      placeholder: "例：4.0.2"
+    validations:
+      required: true
+
+  - type: input
+    id: addon_version
+    attributes:
+      label: アドオンのバージョン
+      placeholder: "例：v1.2.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 発生している問題
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
